@@ -1,4 +1,4 @@
-import hebaImg from "../assets/heba.jpeg";
+import hebaImg from "../assets/heba.webp";
 
 export default function Hero() {
   return (
