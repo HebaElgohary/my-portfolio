@@ -18,7 +18,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-xl text-gray-700 dark:text-gray-300">
-            Front-End Developer • React • Tailwind • UI/UX
+            Front-End Developer • React.js • Next.js • Tailwind CSS
           </p>
 
           <p className="mt-4 max-w-xl text-gray-600 dark:text-gray-400">
