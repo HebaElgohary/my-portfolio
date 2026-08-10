@@ -7,7 +7,7 @@ type Props = {
 
 export default function ProjectCard({ title, description, tech, link }: Props) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:-translate-y-2 transition">
+    <div className="bg-white shadow-card dark:bg-gray-800 p-6 rounded-2xl shadow hover:-translate-y-2 transition">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="text-gray-400 mt-2">{description}</p>
 

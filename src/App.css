@@ -1,58 +1,83 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ================================
+   Design System
+================================ */
 
+:root {
+  /* Primary */
+  --color-primary: #f9a8d4;       /* pink-300 */
+  --color-primary-light: #fbcfe8; /* pink-200 */
+  --color-primary-dark: #f472b6;  /* pink-400 */
 
+  /* Background */
+  --color-bg: #000000;
+  --color-surface: #111111;
+  --color-surface-hover: #181818;
 
+  /* Text */
+  --color-text: #ffffff;
+  --color-text-muted: #a1a1aa;
 
- #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-
-
-
-}
-  body{
-      background-color: black;
-      min-height: 800vh;
-  }
-/*
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  /* Border */
+  --color-border: #27272a;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ================================
+   Light Mode
+================================ */
+
+.light {
+  --color-primary: #f9a8d4;
+  --color-primary-light: #fce7f3;
+  --color-primary-dark: #ec4899;
+
+  --color-bg: #ffffff;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+
+  --color-text: #18181b;
+  --color-text-muted: #71717a;
+
+  --color-border: #e4e4e7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ================================
+   Dark Mode
+================================ */
+
+.dark {
+  --color-primary: #f9a8d4;
+  --color-primary-light: #fbcfe8;
+  --color-primary-dark: #f472b6;
+
+  --color-bg: #000000;
+  --color-surface: #111111;
+  --color-surface-hover: #181818;
+
+  --color-text: #ffffff;
+  --color-text-muted: #a1a1aa;
+
+  --color-border: #27272a;
 }
 
-.card {
-  padding: 2em;
+/* ================================
+   Global
+================================ */
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
-.read-the-docs {
-  color: #888;
-} */
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}

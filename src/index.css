@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Primary - Pink */
+  --color-primary: #f9a8d4;       /* pink-300 */
+  --color-primary-light: #fbcfe8; /* pink-200 */
+  --color-primary-dark: #ec4899;  /* pink-500 */
+
+  /* Background */
+  --color-bg: #ffffff;
+
+  /* Surface */
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+
+  /* Text */
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+
+  /* Border */
+  --color-border: #e5e7eb;
+
+    --shadow-card:
+    0 4px 20px rgba(0, 0, 0, 0.08);
+
+  --shadow-elevated:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  --shadow-glow:
+    0 0 30px rgba(249, 168, 212, 0.15);
+}
+
+
+
+.dark {
+  /* Primary */
+  --color-primary: #f9a8d4;       /* pink-300 */
+  --color-primary-light: #fbcfe8; /* pink-200 */
+  --color-primary-dark: #ec4899;  /* pink-500 */
+
+  /* Background */
+  --color-bg: #000000;
+
+  /* Surface */
+  --color-surface: #111111;
+  --color-surface-hover: #1f1f1f;
+
+  /* Text */
+  --color-text: #f9fafb;
+  --color-text-muted: #9ca3af;
+
+  /* Border */
+  --color-border: #27272a;
+    --shadow-card:
+    0 4px 20px rgba(0, 0, 0, 0.35);
+
+  --shadow-elevated:
+    0 10px 30px rgba(0, 0, 0, 0.5);
+
+  --shadow-glow:
+    0 0 30px rgba(249, 168, 212, 0.12);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
