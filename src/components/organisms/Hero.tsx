@@ -296,10 +296,11 @@ export default function Hero() {
                 border-4
                 border-primary
                 object-cover
-                object-[40%_60%]
+                object-[60%_40%]
                 shadow-elevated
                 transition-transform
                 duration-700
+
                 hover:scale-105
                 sm:h-72
                 sm:w-72
@@ -328,7 +329,7 @@ export default function Hero() {
                 sm:block
               "
             >
-              <p className="text-xs text-text-muted">
+              <p className="text-sm text-gray-500">
                 Core Stack
               </p>
 
