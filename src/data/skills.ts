@@ -1,22 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   SiReact,
   SiTypescript,
-  SiJavascript,
   SiNextdotjs,
   SiTailwindcss,
   SiRedux,
-  SiReactquery,
-  SiMui,
-  SiBootstrap,
-  SiNodedotjs,
-  SiMongodb,
-  SiPostgresql,
-  SiPrisma,
-  SiGit,
-  SiGithub,
-  SiPostman,
-  SiExpo,
+ 
 } from "react-icons/si";
 
 export const coreSkills = [
