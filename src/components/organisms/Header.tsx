@@ -1,4 +1,5 @@
-import { FiArrowDown, FiGithub, FiLinkedin } from "react-icons/fi";
+import { 
+     FiGithub, FiLinkedin } from "react-icons/fi";
 import ThemeToggle from "../molecules/ThemeToggle"
 
 const navLinks = [
@@ -111,7 +112,8 @@ export default function Header() {
             <ThemeToggle />
 
             {/* Contact */}
-            <a
+          
+            {/* <a
               href="#contact"
               className="
                 hidden items-center gap-2
@@ -130,7 +132,7 @@ export default function Header() {
             >
               Let's Talk
               <FiArrowDown size={15} className="-rotate-45" />
-            </a>
+            </a> */}
           </div>
         </nav>
       </div>

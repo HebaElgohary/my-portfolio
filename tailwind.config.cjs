@@ -28,13 +28,13 @@ module.exports = {
         },
 
         border: "var(--color-border)",
-     
       },
-         boxShadow: {
-      card: "var(--shadow-card)",
-      elevated: "var(--shadow-elevated)",
-      glow: "var(--shadow-glow)",
-    },
+
+      boxShadow: {
+        card: "var(--shadow-card)",
+        elevated: "var(--shadow-elevated)",
+        glow: "var(--shadow-glow)",
+      },
     },
   },
 
