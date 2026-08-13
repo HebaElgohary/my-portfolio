@@ -1,5 +1,7 @@
+import {medifindImg,ecommerceImg,skillhatchImg,surveyImg,todoImg,jessicaImg} from '../assets/images'
 export const projects = [
   {
+    img:surveyImg,
     title: "SurveyLand",
     description:
       "A modern survey platform for creating, managing, and analyzing surveys.",
@@ -7,6 +9,7 @@ export const projects = [
     link: "https://survey-land-mocha.vercel.app/",
   },
   {
+    img:skillhatchImg,
     title: "SkillHatch",
     description:
       "A multi-language e-learning platform connecting students and instructors.",
@@ -14,6 +17,7 @@ export const projects = [
     link: "https://education-app-smoky.vercel.app/",
   },
   {
+    img:medifindImg,
     title: "Medifind",
     description:
       "A secure medicine donation platform with healthcare oversight.",
@@ -21,6 +25,7 @@ export const projects = [
     link: "https://medifind-front.vercel.app/",
   },
     {
+      Img:ecommerceImg,
     title: "Products e-commerce",
     description:
       "An e-commerce platform for selling products online.",
@@ -28,6 +33,7 @@ export const projects = [
     link: "https://e-commerce-eta-mocha-14.vercel.app/",
   },
     {
+      img:jessicaImg,
     title: "Jessica Portfolio – Personal Website",
     description:
       "A clean and modern personal portfolio website designed to showcase professional information, skills, and projects. The website includes multiple well-structured sections with a responsive layout and smooth user experience across all devices.",
@@ -35,6 +41,7 @@ export const projects = [
     link:"https://portfolio-template-sooty-psi.vercel.app/",
   },
    {
+    img:todoImg,
     title: "To-Do List Application",
     description:
       " A task management web application that allows users to create, edit, and delete tasks with detailed descriptions. The app supports marking tasks as completed and organizing completed and incomplete tasks into separate categories for easy progress tracking.",

@@ -1,4 +1,5 @@
 type Props = {
+  img: string | undefined;
   title: string;
   description: string;
   tech: string[];
@@ -6,6 +7,7 @@ type Props = {
 };
 
 export default function ProjectCard({
+  img,
   title,
   description,
   tech,
@@ -24,7 +26,6 @@ export default function ProjectCard({
         border
         border-border
         bg-surface
-        p-6
         transition-all
         duration-500
         hover:-translate-y-2
@@ -33,84 +34,132 @@ export default function ProjectCard({
         hover:shadow-primary/10
       "
     >
-      {/* ================= GLOW ================= */}
+      {/* ================= IMAGE ================= */}
       <div
         className="
-          pointer-events-none
-          absolute
-          -right-20
-          -top-20
-          h-48
-          w-48
-          rounded-full
-          bg-primary/10
-          blur-3xl
-          transition-all
-          duration-500
-          group-hover:bg-primary/20
-          group-hover:scale-125
+          relative
+          h-56
+          w-full
+          overflow-hidden
+          bg-bg
         "
-      />
+      >
+        <img
+          src={img}
+          alt={`${title} project preview`}
+          className="
+            h-full
+            w-full
+            object-cover
+            object-top
+            transition-transform
+            duration-700
+            ease-out
+            group-hover:scale-105
+          "
+        />
 
-      {/* ================= TOP ACCENT ================= */}
-      <div
-        className="
-          absolute
-          left-0
-          top-0
-          h-1
-          w-0
-          bg-primary
-          transition-all
-          duration-500
-          group-hover:w-full
-        "
-      />
+        {/* Image overlay */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-black/50
+            via-black/5
+            to-transparent
+            opacity-70
+            transition-opacity
+            duration-500
+            group-hover:opacity-50
+          "
+        />
 
-      <div className="relative flex h-full flex-col">
-
-        {/* ================= PROJECT NUMBER / ICON ================= */}
-        <div className="mb-6 flex items-center justify-between">
-          <div
-            className="
-              flex
-              h-11
-              w-11
-              items-center
-              justify-center
-              rounded-xl
-              border
-              border-primary/20
-              bg-primary/10
-              text-sm
-              font-bold
-              text-primary
-              transition-all
-              duration-300
-              group-hover:scale-110
-              group-hover:border-primary/40
-              group-hover:bg-primary/15
-            "
-          >
-            <span>↗</span>
-          </div>
-
-          <span
-            className="
-              text-xs
-              font-medium
-              uppercase
-              tracking-widest
-              text-text-muted
-            "
-          >
-            Project
-          </span>
+        {/* Project badge */}
+        <div
+          className="
+            absolute
+            left-4
+            top-4
+            rounded-full
+            border
+            border-white/20
+            bg-black/40
+            px-3
+            py-1.5
+            text-[10px]
+            font-semibold
+            uppercase
+            tracking-[0.2em]
+            text-white
+            backdrop-blur-md
+          "
+        >
+          Project
         </div>
 
-        {/* ================= TITLE ================= */}
+        {/* View button */}
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${title}`}
+          className="
+            absolute
+            bottom-4
+            right-4
+            flex
+            h-11
+            w-11
+            translate-y-3
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/20
+            bg-white/15
+            text-white
+            opacity-0
+            backdrop-blur-md
+            transition-all
+            duration-300
+            hover:bg-primary
+            hover:text-black
+            group-hover:translate-y-0
+            group-hover:opacity-100
+          "
+        >
+          ↗
+        </a>
+      </div>
+
+      {/* ================= CONTENT ================= */}
+      <div className="relative flex flex-1 flex-col p-6">
+
+        {/* Glow */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -right-20
+            -top-20
+            h-40
+            w-40
+            rounded-full
+            bg-primary/10
+            blur-3xl
+            transition-all
+            duration-500
+            group-hover:scale-125
+            group-hover:bg-primary/20
+          "
+        />
+
+        {/* Title */}
         <h3
           className="
+            relative
             text-xl
             font-bold
             tracking-tight
@@ -123,10 +172,11 @@ export default function ProjectCard({
           {title}
         </h3>
 
-        {/* ================= DESCRIPTION ================= */}
+        {/* Description */}
         <p
           className="
-            mt-4
+            relative
+            mt-3
             flex-1
             text-sm
             leading-7
@@ -136,15 +186,15 @@ export default function ProjectCard({
           {description}
         </p>
 
-        {/* ================= TECH STACK ================= */}
-        <div className="mt-6">
+        {/* ================= TECH ================= */}
+        <div className="relative mt-6">
           <p
             className="
               mb-3
-              text-[11px]
+              text-[10px]
               font-semibold
               uppercase
-              tracking-widest
+              tracking-[0.2em]
               text-text-muted
             "
           >
@@ -180,14 +230,7 @@ export default function ProjectCard({
         </div>
 
         {/* ================= DIVIDER ================= */}
-        <div
-          className="
-            my-6
-            h-px
-            w-full
-            bg-border
-          "
-        />
+        <div className="my-6 h-px w-full bg-border" />
 
         {/* ================= LINK ================= */}
         <a
@@ -195,6 +238,7 @@ export default function ProjectCard({
           target="_blank"
           rel="noopener noreferrer"
           className="
+            group/link
             inline-flex
             items-center
             justify-between
@@ -221,13 +265,28 @@ export default function ProjectCard({
               text-lg
               transition-transform
               duration-300
-              group-hover:translate-x-1
+              group-hover/link:translate-x-1
             "
           >
             →
           </span>
         </a>
       </div>
+
+      {/* ================= TOP ACCENT ================= */}
+      <div
+        className="
+          absolute
+          left-0
+          top-0
+          h-1
+          w-0
+          bg-primary
+          transition-all
+          duration-500
+          group-hover:w-full
+        "
+      />
     </article>
   );
 }
