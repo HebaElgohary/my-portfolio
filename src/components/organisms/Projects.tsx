@@ -38,7 +38,7 @@ export default function Projects() {
             description={project.description}
             tech={project.tech}
             link={project.link}
-            img={project.Img}
+            img={project.img}
           />
         ))}
       </div>

@@ -25,7 +25,7 @@ export const projects = [
     link: "https://medifind-front.vercel.app/",
   },
     {
-      Img:ecommerceImg,
+      img:ecommerceImg,
     title: "Products e-commerce",
     description:
       "An e-commerce platform for selling products online.",

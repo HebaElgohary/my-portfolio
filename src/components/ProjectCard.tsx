@@ -1,5 +1,5 @@
 type Props = {
-  img: string | undefined;
+  img: string;
   title: string;
   description: string;
   tech: string[];
