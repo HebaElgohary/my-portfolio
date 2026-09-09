@@ -1,12 +1,20 @@
-import {medifindImg,ecommerceImg,skillhatchImg,surveyImg,todoImg,jessicaImg} from '../assets/images'
+import {medifindImg,ecommerceImg,skillhatchImg,todoImg,jessicaImg, surveyLand} from '../assets/images'
 export const projects = [
   {
-    img:surveyImg,
+    img:surveyLand,
     title: "SurveyLand",
     description:
       "A modern survey platform for creating, managing, and analyzing surveys.",
-    tech: ["React", "Tailwind", "shadcn/ui", "Framer Motion"],
-    link: "https://survey-land-mocha.vercel.app/",
+    tech: ["Next.js","TypeScript","React Query", "Tailwind CSS","next-intl", "GSAP"],
+    link: "https://surveyland-nu.vercel.app/",
+  },
+  {
+    img:medifindImg,
+    title: "Medifind",
+    description:
+      "A secure medicine donation platform with healthcare oversight.",
+    tech: ["React", "Bootstrap", "Redux toolkit",'framer motion','nodejs','mongodb'],
+    link: "https://medifind-front.vercel.app/",
   },
   {
     img:skillhatchImg,
@@ -16,14 +24,7 @@ export const projects = [
     tech: ["React", "TypeScript", "Zustand", "i18next"],
     link: "https://education-app-smoky.vercel.app/",
   },
-  {
-    img:medifindImg,
-    title: "Medifind",
-    description:
-      "A secure medicine donation platform with healthcare oversight.",
-    tech: ["React", "Redux", "Bootstrap"],
-    link: "https://medifind-front.vercel.app/",
-  },
+  
     {
       img:ecommerceImg,
     title: "Products e-commerce",

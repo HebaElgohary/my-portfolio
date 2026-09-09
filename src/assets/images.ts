@@ -4,6 +4,8 @@ import medifindImg from'./Screenshot 2026-08-13 161409.png'
 import ecommerceImg from'./Screenshot 2026-08-13 161921.png'
 import todoImg from'./Screenshot 2026-08-13 162131.png'
 import jessicaImg from './Screenshot 2026-08-13 161959.png'
+import surveyLand from './surveyLand.png'
 
-export {surveyImg,skillhatchImg,medifindImg,ecommerceImg,todoImg,jessicaImg}
+
+export {surveyImg,surveyLand,skillhatchImg,medifindImg,ecommerceImg,todoImg,jessicaImg}
 
